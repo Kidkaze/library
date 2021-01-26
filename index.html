@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Library App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="container">
+    <section class="title-header">
+        <h1>My Library</h1>
+    </section>
+    <p class="book-input">Book:</p>
+    <section class="input">
+        <input type="text" class="title-input">
+        <input type="text" class="author">
+        <select id="status" name="books">
+            <option value="read" id="read">read</option>
+            <option value="not read" id="unread">not read</option>
+        </select>
+    </section>
+    <span class="headings">
+        <div class="headers">
+            <div class="title">title</div>
+            <div class="author">author</div>
+            <div class="status">status</div>
+        </div>
+    </span>
+
+    <hr>
+    <section class="books"></section>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
