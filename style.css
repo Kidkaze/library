@@ -1,6 +1,6 @@
 .container {
-	margin: auto;
-	padding: 0%;
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
@@ -10,22 +10,42 @@ h1 {
 	font-size: xx-large;
 }
 
-.book-input {
+.input {
+	display: grid;
+	grid-template-rows: repeat(1, 2em);
+	grid-template-columns: repeat(3, 20em);
+	column-gap: 5px;
 }
 
-.title-input {
+.book-input {
+	margin-bottom: 10px;
+}
+
+.style-input {
+	grid-row: 2/4;
 	padding: 2px 2px;
-	border: 5px 5px black;
-	border-radius: 3px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.style-author {
+	grid-row: 2/4;
+	padding: 2px 2px;
+	border: 1px solid black;
+	border-radius: 5px;
 }
 
 #status {
-	width: 15%;
-	padding: 4px 5px;
-	border: #e60000;
-	border-radius: 7px;
+	width: 50%;
+	grid-row: 2/4;
+	grid-column: 3/4;
+	padding: 2px 2px;
+	border: 1px solid black;
+	border-radius: 5px;
 	background-color: #f7f5f5;
 }
 
-.headings {
+.headers {
+	display: grid;
+	padding: auto 5px auto 5px;
 }
