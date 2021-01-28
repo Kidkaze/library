@@ -23,6 +23,7 @@ h1 {
 
 .style-input {
 	grid-row: 2/4;
+	font-family: 'Montserrat', sans-serif;
 	padding: 2px 2px;
 	border: 1px solid black;
 	border-radius: 5px;
@@ -30,6 +31,7 @@ h1 {
 
 .style-author {
 	grid-row: 2/4;
+	font-family: 'Montserrat', sans-serif;
 	padding: 2px 2px;
 	border: 1px solid black;
 	border-radius: 5px;
@@ -37,16 +39,37 @@ h1 {
 
 #status {
 	width: 50%;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
 	grid-row: 2/4;
 	grid-column: 3/4;
+	background-color: #52b2cf;
 	padding: 2px 2px;
-	border: 1px solid black;
+	border: 1px solid white;
 	border-radius: 5px;
-	background-color: #f7f5f5;
+}
+
+.button {
+	grid-row: 2/4;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	background-color: #52b2cf;
+	width: 5em;
+	border: 1px solid black;
+	border-radius: 2px;
+}
+
+#read {
+	font-family: 'Montserrat', sans-serif;
+}
+
+#unread {
+	font-family: 'Montserrat', sans-serif;
 }
 
 .headers {
 	display: grid;
+	font-family: 'Montserrat', sans-serif;
 	grid-template-rows: repeat(1, 2em);
 	grid-template-columns: repeat(3, 20em);
 	margin-top: 20px;
