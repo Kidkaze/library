@@ -47,5 +47,20 @@ h1 {
 
 .headers {
 	display: grid;
-	padding: auto 5px auto 5px;
+	grid-template-rows: repeat(1, 2em);
+	grid-template-columns: repeat(3, 20em);
+	margin-top: 20px;
+	padding: 0;
+}
+
+.title {
+	text-align: left;
+}
+
+.author {
+	text-align: center;
+}
+
+.status {
+	text-align: right;
 }
