@@ -8,17 +8,18 @@ function Book(title, author, status) {
 	};
 }
 
+// Variables
+const bookVal = document.querySelector('.style-input');
+const authVal = document.querySelector('.style-author');
+const readStatus = document.querySelector('.status');
+const button = document.querySelector('.button');
 let myLibrary = [];
 
-// 
+// add books to library array
 function addBookToLibrary() {
-  const bookVal = document.querySelector('.style-input');
-  const authVal = document.querySelector('.style-author');
-  const readStatus = document.querySelector('.status');
+	let userInput =	button.addEventListener('click', () => {
+		console.log(`${bookVal.value} ${authVal.value}`);
+	});
 } 
 
-console.log(addBookToLibrary());
-/*
-const results = document.querySelector('.dom-results');
-const div = document.createElement('div');
-*/
+addBookToLibrary();
