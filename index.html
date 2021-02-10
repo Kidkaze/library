@@ -14,13 +14,13 @@
         <h1>My Library</h1>
     </section>
     <section class="input">
-        <input type="text" placeholder="book..." class="style-input">
-        <input type="text" placeholder="author..." class="style-author">
+        <input type="text" placeholder="book..." class="book-input">
+        <input type="text" placeholder="author..." class="auth-input">
         <select id="status" name="books">
             <option value="read" id="read">read</option>
             <option value="not read" id="unread">not read</option>
         </select>
-        <button class="button">Submit</button>
+        <button class="button" onclick="addBookToLibrary()">Submit</button>
     </section>
     <span class="headings">
         <div class="headers">
@@ -30,7 +30,7 @@
         </div>
     </span>
 
-    <div class="divde"><hr></div> 
+    <div class="divide"><hr></div> 
     <section class="books"></section>
     </div>
     <div class="dom-results">

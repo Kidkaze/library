@@ -21,10 +21,6 @@ h1 {
 }
 
 .book-input {
-	margin-bottom: 10px;
-}
-
-.style-input {
 	grid-row: 2/4;
 	font-family: 'Montserrat', sans-serif;
 	padding: 2px 2px;
@@ -32,7 +28,7 @@ h1 {
 	border-radius: 5px;
 }
 
-.style-author {
+.auth-input {
 	grid-row: 2/4;
 	font-family: 'Montserrat', sans-serif;
 	padding: 2px 2px;
