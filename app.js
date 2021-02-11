@@ -44,10 +44,3 @@ function displayBooks() {
 }
 
 displayBooks();
-
-/*
-	let showText = document.createElement('div');
-	let bookList = new Book(bookVal.value, authVal.value, readStatus.value);
-	bookList.toString() = showText.textContent 
-		results.appendChild(showText);
-*/
