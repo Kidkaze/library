@@ -21,29 +21,27 @@ Book.prototype.info = function() {
 
 // Add book objects to library
 function addBookToLibrary() {
-	if(!myLibrary) {
-		return;
+	if(myLibrary.length > 0) {
 	}
-	myLibrary.push(newBook);
+	let book = new Book(bookVal.value, authVal.value, readStatus.value); 
+	myLibrary.push(book);
 	console.log(myLibrary);
 	return myLibrary;
 }
 
 addBookToLibrary(); 
 
-/*
+
 // Append books to webpage
-myLibrary.forEach(displayBooks);
+
 function displayBooks() {
-	let showText = document.createElement('div');
-		showText.textContent += newBook.info();
-		results.appendChild(showText);
+
 }
 
 displayBooks();
 
-
-	if(bookVal.value === '') {
-		myLibrary.push(newBook);
-	}
+/*
+	let showText = document.createElement('div');
+		showText.textContent = 
+		results.appendChild(showText);
 */
