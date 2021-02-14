@@ -15,6 +15,7 @@ function Book(title, author, status) {
 	this.status = status;
 }
 
+// Book prototype
 Book.prototype.info = function() {
 	return `${this.title}, ${this.author}, ${this.status}`;
 }
@@ -40,6 +41,8 @@ function displayBooks() {
 	showText.textContent = bookList;
 	results.appendChild(showText);
 	let removeButton = document.createElement('button');
+	removeButton.textContent = 'remove';
+	removeButton.style.color = 'white';
 	removeButton.addEventListener('click', () => {
 		results.removeChild(showText);
 	});

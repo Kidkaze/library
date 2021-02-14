@@ -42,7 +42,7 @@ h1 {
 	color: white;
 	grid-row: 2/4;
 	grid-column: 3/4;
-	background-color: #52b2cf;
+	background-color: #abdafc;
 	padding: 2px 2px;
 	border: 1px solid lightgray;
 	border-radius: 5px;
@@ -52,9 +52,9 @@ h1 {
 	grid-row: 2/4;
 	font-family: 'Montserrat', sans-serif;
 	color: white;
-	background-color: #52b2cf;
+	background-color: #abdafc;
 	width: 5em;
-	border: 1px solid #52b2cf;
+	border: 1px solid #abdafc;
 	border-radius: 2px;
 }
 
@@ -97,11 +97,15 @@ h1 {
 
 .dom-results > div {
 	font-family: 'Montserrat', sans-serif;
-	grid-column: 1/6;
 }
 
 .dom-results > button {
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
 	width: 70px;
 	height: 20px;
 	grid-column: 5/6;
+	background-color: #b8336a;
+	border: 1px solid #b8336a;
+	border-radius: 2px;
 }
