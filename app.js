@@ -33,14 +33,18 @@ addBookToLibrary();
 
 
 // Append books to webpage
-
 function displayBooks() {
 	button.addEventListener('click', () => {
 	let showText = document.createElement('div');
-	let bookList = `${bookVal.value}, ${authVal.value}, ${readStatus.value}`;
-	showText.textContent = bookList.toString();
-		results.appendChild(showText);
-		});
+	let bookList = `${bookVal.value} ${authVal.value} ${readStatus.value}`;
+	showText.textContent = bookList;
+	results.appendChild(showText);
+	let removeButton = document.createElement('button');
+	removeButton.addEventListener('click', () => {
+		results.removeChild(showText);
+	});
+	results.appendChild(removeButton);
+	});
 }
 
 displayBooks();

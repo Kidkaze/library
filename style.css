@@ -86,3 +86,22 @@ h1 {
 .status {
 	text-align: right;
 }
+
+.dom-results {
+	display: grid;
+	grid-template-columns: repeat(1, 20em);
+	grid-template-rows: repeat(4, 2em);
+	margin-top: 20px;
+	padding: 0;
+}
+
+.dom-results > div {
+	font-family: 'Montserrat', sans-serif;
+	grid-column: 1/6;
+}
+
+.dom-results > button {
+	width: 70px;
+	height: 20px;
+	grid-column: 5/6;
+}
