@@ -91,6 +91,7 @@ h1 {
 	display: grid;
 	grid-template-columns: repeat(1, 20em);
 	grid-template-rows: repeat(4, 2em);
+	grid-auto-rows: 35px;
 	margin-top: 20px;
 	padding: 0;
 }
@@ -104,7 +105,7 @@ h1 {
 	text-align: center;
 	width: 70px;
 	height: 20px;
-	grid-column: 5/6;
+	grid-column: 6/7;
 	background-color: #b8336a;
 	border: 1px solid #b8336a;
 	border-radius: 2px;
