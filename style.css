@@ -98,6 +98,10 @@ h1 {
 
 .dom-results > div {
 	font-family: 'Montserrat', sans-serif;
+	grid-column: 1/5;
+	align-self: center;
+	margin-top: 20px;
+	padding-bottom: 25px;
 }
 
 .dom-results > button {
@@ -106,6 +110,7 @@ h1 {
 	width: 70px;
 	height: 20px;
 	grid-column: 6/7;
+	align-self: center;
 	background-color: #b8336a;
 	border: 1px solid #b8336a;
 	border-radius: 2px;

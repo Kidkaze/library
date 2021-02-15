@@ -17,16 +17,15 @@ function Book(title, author, status) {
 
 // Book prototype
 Book.prototype.info = function() {
-	return `${this.title}, ${this.author}, ${this.status}`;
+	return `${bookVal.value} ${authVal.value} ${readStatus.value}`;
 }
 
 // Add book objects to library
 function addBookToLibrary() {
 	if(myLibrary.length > 0) {
 	}
-	let book = new Book(bookVal.value, authVal.value, readStatus.value); 
+	let book = newBook.info(); 
 	myLibrary.push(book);
-	console.log(myLibrary);
 	return myLibrary;
 }
 
@@ -37,16 +36,20 @@ addBookToLibrary();
 function displayBooks() {
 	button.addEventListener('click', () => {
 	let showText = document.createElement('div');
-	let bookList = `${bookVal.value} ${authVal.value} ${readStatus.value}`;
+	let bookList = newBook.info();
 	showText.textContent = bookList;
 	results.appendChild(showText);
-	let removeButton = document.createElement('button');
-	removeButton.textContent = 'remove';
-	removeButton.style.color = 'white';
-	removeButton.addEventListener('click', () => {
-		results.removeChild(showText);
-	});
-	results.appendChild(removeButton);
+		function removeEntry() {
+			let removeButton = document.createElement('button');
+			removeButton.textContent = 'remove';
+			removeButton.style.color = 'white';
+			removeButton.addEventListener('click', () => {
+			results.removeChild(showText);
+			removeButton.remove();
+			});
+			results.appendChild(removeButton);
+		}
+		removeEntry();
 	});
 }
 
