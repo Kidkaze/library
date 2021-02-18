@@ -36,9 +36,20 @@ addBookToLibrary();
 function displayBooks() {
 	button.addEventListener('click', () => {
 	let showText = document.createElement('div');
-	let bookList = newBook.info();
-	showText.textContent = bookList;
+	let bookList = document.createElement('div');
+	let authList = document.createElement('div');
+	let readList = document.createElement('div');
+	bookList.className = 'bookList';
+	authList.className = 'authList';
+	readList.className = 'readList';
+	bookList.textContent = bookVal.value;
+	authList.textContent = authVal.value;
+	readList.textContent = readStatus.value;
+	showText.appendChild(bookList);
+	showText.appendChild(authList);
+	showText.appendChild(readList);
 	results.appendChild(showText);
+
 		function removeEntry() {
 			let removeButton = document.createElement('button');
 			removeButton.textContent = 'remove';

@@ -14,7 +14,6 @@ h1 {
 
 .input {
 	display: grid;
-	align-content: center;
 	grid-template-rows: repeat(1, 2em);
 	grid-template-columns: repeat(3, 20em);
 	column-gap: 5px;
@@ -68,6 +67,7 @@ h1 {
 
 .headers {
 	display: grid;
+	justify-items: left;
 	font-family: 'Montserrat', sans-serif;
 	grid-template-rows: repeat(1, 2em);
 	grid-template-columns: repeat(3, 20em);
@@ -97,8 +97,10 @@ h1 {
 }
 
 .dom-results > div {
+	display: grid;
+	grid-template-columns: repeat(3, 20em);
+	grid-template-rows: repeat(1, 2em);
 	font-family: 'Montserrat', sans-serif;
-	grid-column: 1/5;
 	align-self: center;
 	margin-top: 20px;
 	padding-bottom: 25px;
@@ -114,4 +116,12 @@ h1 {
 	background-color: #b8336a;
 	border: 1px solid #b8336a;
 	border-radius: 2px;
+}
+
+.dom-results > div > .authList {
+	grid-column: 2/3;
+}
+
+.dom-results > div > .readList {
+	grid-column: 3/4;
 }
