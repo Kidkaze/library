@@ -126,3 +126,16 @@ h1 {
 .dom-results > div > .readList {
 	grid-column: 3/4;
 }
+
+.dom-results > div > .readList {
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	width: 100px;
+	height: 20px;
+	grid-column: 3/4;
+	align-self: center;
+	background-color: rgb(255, 255, 255);
+	border: 1px none rgb(255, 255, 255);
+	outline: 1px solid black;
+	border-radius: 5px;
+}

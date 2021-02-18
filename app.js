@@ -38,7 +38,7 @@ function displayBooks() {
 	let showText = document.createElement('div');
 	let bookList = document.createElement('div');
 	let authList = document.createElement('div');
-	let readList = document.createElement('div');
+	let readList = document.createElement('button');
 	bookList.className = 'bookList';
 	authList.className = 'authList';
 	readList.className = 'readList';
@@ -50,6 +50,7 @@ function displayBooks() {
 	showText.appendChild(readList);
 	results.appendChild(showText);
 
+	// Remove button for DOM Entries
 		function removeEntry() {
 			let removeButton = document.createElement('button');
 			removeButton.textContent = 'remove';
@@ -65,3 +66,13 @@ function displayBooks() {
 }
 
 displayBooks();
+
+/*
+readStatus.addEventListener('clicked', () => {
+	if(readStatus.value == 'read') {
+		return readStatus.value = 'not read';
+	} else {
+		return readStatus.value = 'read';
+	}
+});
+*/
