@@ -69,6 +69,7 @@ h1 {
 	display: grid;
 	justify-items: left;
 	font-family: 'Montserrat', sans-serif;
+	font-weight: bolder;
 	grid-template-rows: repeat(1, 2em);
 	grid-template-columns: repeat(3, 20em);
 	margin-top: 20px;
