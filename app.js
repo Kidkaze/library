@@ -1,3 +1,5 @@
+"use strict";
+
 // Variables
 let myLibrary = [];
 const bookVal = document.querySelector('.book-input');
@@ -5,8 +7,6 @@ const authVal = document.querySelector('.auth-input');
 const readStatus = document.querySelector('select');
 const button = document.querySelector('.button');
 const results = document.querySelector('.dom-results');
-const newBook = new Book(bookVal.value, authVal.value, readStatus.value); 
-
 
 // Book constructor
 function Book(title, author, status) {
@@ -14,6 +14,8 @@ function Book(title, author, status) {
 	this.author = author;
 	this.status = status;
 }
+
+const newBook = new Book(bookVal.value, authVal.value, readStatus.value);
 
 // Book prototype
 Book.prototype.info = function() {
@@ -31,7 +33,6 @@ function addBookToLibrary() {
 
 addBookToLibrary(); 
 
-
 // Append books to webpage
 function displayBooks() {
 	button.addEventListener('click', () => {
@@ -45,6 +46,14 @@ function displayBooks() {
 	bookList.textContent = bookVal.value;
 	authList.textContent = authVal.value;
 	readList.textContent = readStatus.value;
+	readList.addEventListener('click', function(event) {
+		const btnEl = event.target;
+		if(btnEl.innerText == 'read') {
+			return btnEl.innerText = 'not read';
+		} else if(btnEl.innerText == 'not read') {
+			return btnEl.innerText = 'read';
+		}
+	});
 	showText.appendChild(bookList);
 	showText.appendChild(authList);
 	showText.appendChild(readList);
@@ -66,13 +75,3 @@ function displayBooks() {
 }
 
 displayBooks();
-
-/*
-readStatus.addEventListener('clicked', () => {
-	if(readStatus.value == 'read') {
-		return readStatus.value = 'not read';
-	} else {
-		return readStatus.value = 'read';
-	}
-});
-*/
