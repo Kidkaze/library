@@ -7,6 +7,7 @@ const authVal = document.querySelector('.auth-input');
 const readStatus = document.querySelector('select');
 const button = document.querySelector('.button');
 const results = document.querySelector('.dom-results');
+const newBook = new Book(bookVal.value, authVal.value, readStatus.value);
 
 // Book constructor
 function Book(title, author, status) {
@@ -14,8 +15,6 @@ function Book(title, author, status) {
 	this.author = author;
 	this.status = status;
 }
-
-const newBook = new Book(bookVal.value, authVal.value, readStatus.value);
 
 // Book prototype
 Book.prototype.info = function() {
@@ -72,6 +71,26 @@ function displayBooks() {
 		}
 		removeEntry();
 	});
+
+	// Get Element for firebase
+	const resultsObj = document.getElementById('results');
+	button.addEventListener('click', () => {
+	// Create Ref point
+	const resultsRef = firebase.database().ref().child('results');
+
+	// Sync object changes
+	resultsRef.push().set({
+		book: bookVal.value,
+		author: authVal.value,
+		status: readStatus.value
+	});
+	
+	// Print object on screen
+	resultsRef.on('value', snap => {
+		resultsRef.push(resultsObj.showText);
+		});
+	});
 }
+
 
 displayBooks();

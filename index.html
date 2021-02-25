@@ -33,9 +33,32 @@
     <div class="divide"><hr></div> 
     <section class="books"></section>
 
-    <div class="dom-results">
+    <div class="dom-results" id="results">
     </div>
     </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-storage.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCsGDoiNgXViM5BnExVPT5pK2gcaCk9E1M",
+            authDomain: "library-b1f22.firebaseapp.com",
+            projectId: "library-b1f22",
+            storageBucket: "library-b1f22.appspot.com",
+            messagingSenderId: "331454575358",
+            appId: "1:331454575358:web:9ce06b73ffc63bac342baf",
+            databaseURL: "https://library-b1f22-default-rtdb.europe-west1.firebasedatabase.app/"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
     <script src="app.js"></script>
 </body>
 </html>
